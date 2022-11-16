@@ -55,7 +55,7 @@ def partition_g(a, low, high, k, num_comp, num_swap):
       j -= 1
     if i == k == j: # a[k] is the value we are looking for, just return that
       return k, k, num_comp, num_swap
-    # in Hoare's quick select, the iteration continues until i,j crosses each other (when all elements have been partitioned).
+    # in Hoare's quick select, the iteration continues until i,j cross each other (when all elements have been partitioned).
     # But we can stop this iteration earlier if i == k or j == k, since by then we already know:
     # (1) Which side we will choose in the next iteration
     # (2) The other side (the part which has already been partitioned) are guarentted to not be the value we are looking for
