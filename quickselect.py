@@ -93,7 +93,7 @@ if __name__ == '__main__':
     val_h, num_comp_h, num_swap_h = qselect_h(list(c),k)
     val_g, num_comp_g, num_swap_g = qselect_g(list(c),k)
     answer_correct &= (val_h == val_g == 2*k+1) # if any element mismatches then it'd be False
-    print(f"{k: 5d}:\033[0;{'32m' if val_h==val_g==2*k+1 else '31m'}{val_g: >5d}\033[00m {num_comp_h: >5d}\033[0;{'32m>' if num_comp_h > num_comp_g else '32m=' if num_comp_h == num_comp_g else '31m<'}\033[00m{num_comp_g: <5d}{num_swap_h: >4d}\033[0;{'32m>' if num_swap_h > num_swap_g else '32m=' if num_swap_h == num_swap_g else '31m<'}\033[00m{num_swap_g: <4d}")
+    print(f"{k: 5d}: \033[0;{'32m' if val_h==val_g==2*k+1 else '31m'}{val_g: >5d}\033[00m {num_comp_h: >5d}\033[0;{'32m>' if num_comp_h > num_comp_g else '32m=' if num_comp_h == num_comp_g else '31m<'}\033[00m{num_comp_g: <5d} {num_swap_h: >4d}\033[0;{'32m>' if num_swap_h > num_swap_g else '32m=' if num_swap_h == num_swap_g else '31m<'}\033[00m{num_swap_g: <4d}")
     num_comp_sum_h += num_comp_h
     num_swap_sum_h += num_swap_h
     num_comp_sum_g += num_comp_g
